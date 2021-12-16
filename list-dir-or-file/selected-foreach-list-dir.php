@@ -1,6 +1,7 @@
 <div class="form-group">
 <label for="sel1"><h2>Push E-mail address</h2></label>
 <select class="form-control" id="sampleSelect">
+<option  value="">Select</option>	
       <?php
 	  
 $dirs = array_filter(glob('*'), 'is_dir');
