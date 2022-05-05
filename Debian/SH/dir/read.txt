@@ -1,0 +1,4 @@
+wget https://github.com/eurowebpage/Code-Snippets/blob/main/Debian/SH/dir/create-a-dir.sh
+chmod +x create-a-dir.sh
+sudo mv create-a-dir.sh /var/www/html
+
