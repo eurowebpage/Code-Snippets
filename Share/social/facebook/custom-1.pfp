@@ -1,3 +1,15 @@
 <img src="https://greniers.be/G2A-4/img/div/20220514123712.jpg" alt="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('https://greniers.be/G2A-4/'),'facebook-share-dialog','width=626,height=436'); return false;">
-
+############################################################
 https://www.facebook.com/sharer/sharer.php?u=https://your-url/&quote=THE_CUSTOM_message
+############################################################
+<?php
+        $title = urlencode("How to Create a Custom Facebook Share Button with a Custom Counter");
+        $url = urlencode("https://greniers.be/G2A-4/");
+        $summary = urlencode("Learn how to create a custom Facebook 'Share' button, complete with a custom counter, for your website!");
+        $image = urlencode("https://greniers.be/G2A-4/img/div/20220514123712.jpg");
+?>
+<html>
+        <a id="button" onClick="window.open('https://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $title; ?>&amp;p[summary]=<?php echo $summary; ?>&amp;p[url]=<?php echo $url; ?>&amp;&p[images][0]=<?php echo $image; ?>', 'sharer', 'toolbar=0,status=0,width=550,height=400');" target="_parent" href="javascript: void(0)">
+            Click to Share 
+        </a>
+</html>
