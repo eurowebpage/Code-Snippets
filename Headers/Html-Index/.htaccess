@@ -1,0 +1,14 @@
+<files .htaccess>
+order allow,deny
+deny from all
+</files>
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.%{HTTP_HOST}$
+RewriteRule ^(.*) http://%{HTTP_HOST}/$1 [QSA,L,R=301]
+
+RewriteEngine On
+RewriteRule ^([a-zA-Z0-9\-\_]+)$ $1.php
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
