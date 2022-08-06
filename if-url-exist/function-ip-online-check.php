@@ -14,7 +14,7 @@ if ($reponse) return true;
 return false;
 }
 // Exemple
-$IPonlineCheck = "51.75.238.51";
+$IPonlineCheck = "515.755.238.515";
 if(onlineCheck($IPonlineCheck)){echo "<br>IP : $IPonlineCheck en ligne";}
 else {echo "<br><br>IP : $IPonlineCheck Pas en ligne";}
 ?>
