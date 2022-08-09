@@ -1,1 +1,10 @@
 
+User Agent Page Speed Insights sont : "Chrome-Lighthouse" pour mobile et "Google Page Speed Insights" pour ordinateur. Ainsi, le code php ressemblera à ceci :
+
+
+
+<?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Chrome-Lighthouse') === false  || stripos($_SERVER['HTTP_USER_AGENT'], 'Google Page Speed Insights') === false): ?>
+
+// votre code google analytics et tout autre script externe que vous souhaitez masquer de PageSpeed Insights ici
+
+<?php endif; ?>
