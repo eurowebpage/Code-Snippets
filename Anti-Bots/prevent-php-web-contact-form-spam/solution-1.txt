@@ -1,1 +1,10 @@
+<!--  html - dans votre formulaire existant, ajoutez ce champ  -->
+<input type="text" id="website" name="website"/>
+
+/*dans votre css masquez le champ pour que les vrais utilisateurs ne puissent pas le remplir*/
+form #website{ display:none; }
+
+//dans votre php, ignorez toutes les soumissions qui incluent ce champ
+if(!empty($_POST['website'])) die();
+
 
