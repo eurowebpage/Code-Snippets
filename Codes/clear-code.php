@@ -1,4 +1,3 @@
-
 <?php
 $file_source = "cookies.php";
 $file_clear = "cookies.php";
@@ -8,3 +7,5 @@ $str = preg_replace("/<!--((?!batcache)(?!\\[endif\\])[\\s\\S])*?-->/", "", $str
 $str = preg_replace("/^\s+/m", " ", $str); // supprime espaces blanc debut de ligne
 file_put_contents($file_clear, $str);
 ?>
+
+
