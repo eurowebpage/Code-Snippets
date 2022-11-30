@@ -1,27 +1,12 @@
 <?php
-function relativepath($to) {
-    $a=explode("/",$_SERVER["PHP_SELF"] );
-    $index= array_search("$to",$a);
-    $str=""; 
-    for ($i = 0; $i < count($a)-$index-2; $i++) {
-        $str.= "../";
-    }
-    return $str;
+############
+$a=explode("/",$_SERVER["PHP_SELF"] );
+$index= array_search("",$a);
+$relativePath=""; 
+for ($i = 0; $i < count($a)-$index-2; $i++) {
+$relativePath.= "../";
 }
-echo "<br>".relativepath("");
 ############
-    $a=explode("/",$_SERVER["PHP_SELF"] );
-    $index= array_search("",$a);
-    $str=""; 
-    for ($i = 0; $i < count($a)-$index-2; $i++) {
-        $str.= "../";
-    }
-    
-
-echo "<br>".$str;
-############
-define('ROOT_PATH', dirname(__DIR__) . '/');
-echo "<br>".ROOT_PATH;
 if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") { 
 $protocolsite = "https://";
 } else { 
@@ -57,13 +42,6 @@ echo "<br>Could not resolve the IP address for the host $host!<BR/>\n";
 echo "<br>The IP address for the host $host is: $ip_addr<BR/>\n";
 }
 #####
-function isLocal ()
-{
-return !checkdnsrr($_SERVER['SERVER_NAME'], 'NS');
-}
-echo "<br>".isLocal();
-
-#####
 ob_start();
 system('ipconfig /all');
 $mycom=ob_get_contents();
@@ -80,17 +58,6 @@ echo "<br>no mac address detected";
 #####		
 echo "<br>".$page_directory;
 echo "<br>".$documentRoot;
-###
-$newpath = realpath($_SERVER["DOCUMENT_ROOT"] . "/../");
-echo "<br>sub1 ".$newpath;
-###
-$path = $documentRoot;
-$tmp = explode("/", $path);
-array_pop($tmp);
-$path_up = implode('/', $tmp);
-echo "<br>sub2 ".$path_up;
-;
-###
 echo "<br>".$actual_filename;
 echo "<br>".$phpVersion;
 echo "<br>".$ip_addr;
@@ -100,4 +67,6 @@ echo "<br>".$protocolsite;
 echo "<br>".$serverName;
 echo "<br>".$requestUri;
 echo "<br>".$checkIp;
+echo "<br>".$relativePath;
+#####################################
 ?>
