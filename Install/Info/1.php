@@ -51,11 +51,15 @@ $pmac = strpos($mycom, $findme);
 $mac=substr($mycom,($pmac+32),20);
 if(isset($mac) && $mac >3 ){
 echo "<br>".$mac;
+$id = md5($mac);
 }
 else{
 echo "<br>no mac address detected";
+$id = md5($host);
 }
-#####		
+#####
+echo "<br>".$host;
+echo "<br>".$id;		
 echo "<br>".$page_directory;
 echo "<br>".$documentRoot;
 echo "<br>".$actual_filename;
