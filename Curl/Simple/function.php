@@ -7,7 +7,7 @@ function web_curl_http($url)
    curl_setopt( $c , CURLOPT_RETURNTRANSFER, true);
    curl_setopt( $c , CURLOPT_SSL_VERIFYPEER, false);
    curl_setopt( $c , CURLOPT_SSL_VERIFYHOST, false);
-   curl_setopt($c, CURLOPT_REFERER, "test.scriptphp.eu");
+   curl_setopt($c, CURLOPT_REFERER, "votresite.com.ou.eu");
 
    curl_setopt( $c , CURLOPT_TIMEOUT, 10000); // 10 sec
    $data = curl_exec($c);
