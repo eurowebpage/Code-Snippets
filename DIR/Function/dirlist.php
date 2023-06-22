@@ -9,7 +9,7 @@ $listdirectories = "";
 foreach($scandir as $dir){
 $baseLink = $loc . DIRECTORY_SEPARATOR . $dir;
 if(is_dir($baseLink)){
-$listdirectories .= ''.$start_tag.'<a class="'.$class.'" href="'.$link.$dir.'" '.$other.' title="'.$dir.'">'.$dir.'</a>'.$end_tag.'';
+$listdirectories .= ''.$start_tag.'<a class="'.$class.'" href="'.$link.$dir.'/" '.$other.' title="'.$dir.'">'.$dir.'</a>'.$end_tag.'';
 }
 }
 return $listdirectories;
