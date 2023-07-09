@@ -1,5 +1,8 @@
+<?php
+$exp_session_time = 300;
+$urlpage = $protocolsite.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+?>
 <head>
-
 <script>
 $(function() {
 if($(location).attr('hash') === '#ExpSessReturn') {
@@ -42,7 +45,7 @@ changeButton();
 </div>
 <div class="modal-body">
 <p class="lead">Message d'avertissement pour les sessions utilisateur inactives</p>
-<p class="lead">Session time seconds : <?php echo $exp_session_time ?> seconds</p>
+<p class="lead">Session time seconds : <?php echo $exp_session_time; ?> seconds</p>
 </div>
 <div class="modal-footer">
 </div>
