@@ -1,0 +1,22 @@
+##CopyToClipboard.php##
+===============================
+<?php include($path_server.'common/js/script/CopyToClipboard.php'); ?>
+
+<a href="#" class="btn btn-sm btn-success ml-1" onclick="CopyToClipboard(\''.$var.'b\');return false;">Copy </a>
+
+===============================
+##CopyToClipboard.php##
+
+##cookie.php##
+===============================
+<?php include($path_server.'common/js/script/cookie.php');?>
+
+/* Exemple */
+<script>
+//var  lang = getCookie('googtrans');
+//var current_language = gt_get_cookie('googtrans').split('/').pop();
+//setCookie('ppkcookie',lang,7);
+//eraseCookie('ppkcookie');
+</script>
+===============================
+##cookie.php##
