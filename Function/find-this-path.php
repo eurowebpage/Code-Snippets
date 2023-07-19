@@ -1,4 +1,4 @@
-function findThis
+function findThis pathToRoot
 <?php
 function findThis($get){
     $d = '';
