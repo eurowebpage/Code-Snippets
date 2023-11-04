@@ -3,6 +3,13 @@ $protocol =((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVE
 $hostame  = $_SERVER['HTTP_HOST'];
 $script   = $_SERVER['SCRIPT_NAME'];
 $params   = $_SERVER['QUERY_STRING'];
+$server_name = $_SERVER['SERVER_NAME'];
+$server_name_extension = pathinfo($_SERVER['SERVER_NAME'], PATHINFO_EXTENSION);
+if(isset($server_name_extension)? $server_name_extension : null){
+$server_name_extension=$server_name_extension;
+}else{
+$server_name_extension="empty";
+}
 if ($params == ""){
 $currentUrl = $protocol  . $hostame . $script . $params;
 }
@@ -13,12 +20,18 @@ $tld = parse_url($currentUrl);
 $tld = (isset($tld['scheme']) ? $tld['host'] : $tld['path']);
 $tld = explode('.',$tld);
 $tld = end($tld);
-if(!isset($tld)? $tld : null){
+if(isset($tld)? $tld : null){
 $tld=$tld;
 }else{
 $tld="empty";
 }
+echo '<hr>';
+echo "tld : ".$tld . "<br>";
 
+echo '<hr>';
+echo "server_name : ".$server_name . "<br>";
+echo "server_name_extension : ".$server_name_extension . "<br>";
+echo '<hr>';
 $url = "https://www.abc.xyz/test";  //With https URL_SCHEME 
 //$url = $currentUrl;  //Without https URL_SCHEME 
 
