@@ -1,0 +1,1 @@
+curl -L https://url-domain/favicon.ico -o favicon.ico
