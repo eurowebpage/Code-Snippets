@@ -14,3 +14,18 @@ How do I preserve the remote filename when Downloading a file using curl
 -J, --remote-header-name   Use the header-provided filename
 
 curl  -O -J 'https://url'
+
+=================================
+Download to a file named by the URL
+
+curl -o file.html http://example.com/file.html
+
+You can save the remote URL resource into the local file 'file.html' with this:
+
+curl -O http://example.com/file.html
+
+Store in another directory
+
+curl -O --output-dir /tmp http://example.com/file.html
+
+
