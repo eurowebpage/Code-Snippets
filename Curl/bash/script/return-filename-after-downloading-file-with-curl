@@ -1,0 +1,10 @@
+file1="$(curl -O --remote-name -s \
+    -w "%{filename_effective}" "https://url.com/download_file.tgz")"
+echo "$file1"
+
+===== script 2 =========
+file1=download_file.tgz
+url=https://url.com/$file1 #encoding this might be necessary
+curl -O --remote-name $url
+echo $file1
+
