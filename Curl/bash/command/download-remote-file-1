@@ -6,3 +6,11 @@ curl --remote-name --remote-header-name --location $url
 
 curl -O -J -L $url
 
+================
+How do I preserve the remote filename when Downloading a file using curl
+================
+
+-O, --remote-name          Write output to a file named as the remote file  
+-J, --remote-header-name   Use the header-provided filename
+
+curl  -O -J 'https://url'
