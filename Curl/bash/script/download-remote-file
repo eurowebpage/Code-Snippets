@@ -1,0 +1,4 @@
+URL=http://192.168.150.41:8080/filereport/31779/json/
+file_number=$(echo $URL | awk -F/ '{print $(NF-2)}')
+file_name="${file_number}_report.json"
+curl -L "$URL" -o "$file_name"
