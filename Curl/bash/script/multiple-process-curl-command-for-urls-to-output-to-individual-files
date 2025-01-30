@@ -1,0 +1,46 @@
+You cannot create a file with / in the filename. You could do it this way:
+
+#!/bin/bash
+
+while IFS= read -r line
+do
+    echo "LINE: $line"
+
+    if [[ "$line" != "" ]]
+    then
+        filename="${line#https://}"
+        echo "FILENAME: $filename"
+        
+        # YOUR CURL COMMAND HERE, USING $filename
+    fi
+done < url.txt
+
+
+it ignores empty lines
+variable substitution is used to remove the https:// part of each URL
+this will allow you to create the file
+
+
+
+Note: if your URLs containt sub-directories, they must be removed as well.
+
+Ex: you want to do https://www.exemple.com/some/sub/dir The script I suggested here would try to create a file named "www.exemple.com/some/sub/dir". In this case, you could replace the / with _ using tr.
+
+The script would become:
+
+
+#!/bin/bash
+
+while IFS= read -r line
+do
+    echo "LINE: $line"
+
+    if [[ "$line" != "" ]]
+    then
+        filename=$(echo "$line" | tr '/' '_')
+        filename2=${filename#https:__}
+        echo "FILENAME: $filename2"
+
+        # YOUR CURL COMMAND HERE, USING $filename2
+    fi
+done < url.txt
