@@ -1,5 +1,5 @@
 # URL of main Sitemap
-sitemap_url="https://deb.ovh/remote/test/1/1.xml"
+sitemap_url="https://your-url/remote/test/1/1.xml"
 
 # Extract all Sitemap URLs
 #sitemap_urls=$(curl -s "$sitemap_url" | grep -oP '(?<=<loc>)[^<]+')
